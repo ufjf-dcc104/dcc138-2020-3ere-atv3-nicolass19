@@ -14,7 +14,7 @@
         const canvas = document.querySelector("canvas");
         const ctx = canvas.getContext("2d");
         const skelly = new Image();
-        skelly.src = "assets/skelly.png";
+        skelly.src = "assets/mario.png";
         skelly.addEventListener("load", TerminouDeCarregar);
 
         function desenhaFundo(){
@@ -26,27 +26,17 @@
         let pose = 0;
         let quadro = 0
         const POSES = [
-            {qmax:7 , pv:9}, 
-            {qmax:7 , pv:9}, 
-            {qmax:7 , pv:9}, 
-            {qmax:7 , pv:9}, 
-            {qmax:8 , pv:9},
-            {qmax:8 , pv:9}, 
-            {qmax:8 , pv:9}, 
-            {qmax:8 , pv:9}, 
-            {qmax:9 , pv:9},
-            {qmax:9 , pv:9},
-            {qmax:9 , pv:9}, 
-            {qmax:9 , pv:9}, 
-            {qmax:6 , pv:9}, 
-            {qmax:6 , pv:9}, 
+        {qmax:12 , pv:9}, 
+            {qmax:12, pv:9}, 
+            {qmax:1 , pv:9}, 
+            {qmax:3 , pv:9}, 
+            {qmax:4 , pv:9},
+            {qmax:2 , pv:9},
+            {qmax:2 , pv:9},
+            {qmax:2 , pv:9},
             {qmax:6 , pv:9},
-            {qmax:6 , pv:9}, 
-            {qmax:13 , pv:27},
-            {qmax:13 , pv:27},
-            {qmax:13 , pv:27},
-            {qmax:13 , pv:27}, 
-            {qmax:6 , pv:9}
+            {qmax:1 , pv:9},
+            {qmax:1 , pv:9}, 
         ];
         
         function TerminouDeCarregar(){
@@ -69,9 +59,9 @@
 
             ctx.drawImage(skelly,
             //sx, sy, sw, sh
-            Math.floor(quadro)*64, pose*64, 64, 64,
+            Math.floor(quadro)*61, pose*61, 61, 61,
             //dx, dy, dw, dh
-            0, 0, 64, 64
+            0, 0, 61, 61
             );
             
             
